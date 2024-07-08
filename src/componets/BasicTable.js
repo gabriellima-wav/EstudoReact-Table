@@ -22,6 +22,7 @@ export const BasicTable = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
+    footerGroups,
     rows,
     prepareRow,
   } = tableInstance;
@@ -53,6 +54,24 @@ export const BasicTable = () => {
           );
         })}
       </tbody>
+      <tfooter>
+        {
+            footerGroups.map(footerGroups => (
+            <tr{... footerGroups.getFooterGroupProps()}>
+            {
+                                footerGroups.headers.map(column => (
+                    <td{...column.getFooterProps}>
+                    {
+                        column.render('Footer')
+                    }
+
+                    </td>
+                 ))
+            }
+            </tr>
+            ))
+        }
+      </tfooter>
     </table>
   );
 };

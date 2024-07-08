@@ -1,31 +1,31 @@
 export const COLUMNS = [
     {
-        Headers: 'Id',
+        Header: 'Id',
         accessor: 'Id'
     },
 
     {
-        Headers: 'First Name',
+        Header: 'First Name',
         accessor: 'First_name'
     },
 
     {
-        Headers: 'Last Name',
+        Header: 'Last Name',
         accessor: 'last_name'
     },
 
     {
-        Headers: 'Date of Birth',
+        Header: 'Date of Birth',
         accessor: 'date_of_birth'
     },
 
     {
-        Headers: 'Country',
+        Header: 'Country',
         accessor: 'Country'
     },
 
     {
-        Headers: 'Phone',
+        Header: 'Phone',
         accessor: 'phone'
     }
 

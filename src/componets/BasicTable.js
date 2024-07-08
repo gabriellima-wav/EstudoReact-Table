@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
 
-import MOCK_DATA from '../data/MOCK_DATA.json'; // Caminho relativo ajustado
-import { COLUMNS } from '../data/columns'; // Caminho relativo ajustado
+import MOCK_DATA from '../data/MOCK_DATA.json'; 
+import { COLUMNS } from '../data/columns';
 
 import './table.css';
 

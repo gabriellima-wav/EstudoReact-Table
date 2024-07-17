@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useTable } from 'react-table';
 
-import MOCK_DATA from '../data/MOCK_DATA.json'; 
+import MOCK_DATA from '../data/MOCK_DATA.json';
 import { COLUMNS, GROUPED_COLUMNS } from '../data/columns';
 
 import './table.css';
@@ -54,24 +54,17 @@ export const BasicTable = () => {
           );
         })}
       </tbody>
-      <tfooter>
-        {
-            footerGroups.map(footerGroups => (
-            <tr{... footerGroups.getFooterGroupProps()}>
-            {
-                                footerGroups.headers.map(column => (
-                    <td{...column.getFooterProps}>
-                    {
-                        column.render('Footer')
-                    }
-
-                    </td>
-                 ))
-            }
-            </tr>
-            ))
-        }
-      </tfooter>
+      <tfoot>
+        {footerGroups.map((footerGroup) => (
+          <tr {...footerGroup.getFooterGroupProps()} key={footerGroup.id}>
+            {footerGroup.headers.map((column) => (
+              <td {...column.getFooterProps()} key={column.id}>
+                {column.render('Footer')}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tfoot>
     </table>
   );
 };
